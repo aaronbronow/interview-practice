@@ -14,7 +14,8 @@
 
 ## modulus
 
-1. do something every nth time
+1. do something every nth time on a very long array (10^20)
+  a. gradually speed up by skipping more
 2. implement time in words 1:30 == "half past one"
 
 ## bitmasking and bitshifting
