@@ -12,7 +12,7 @@
 4. escape the maze
     - take a matrix of maze cells and return the directions out of the maze
 
-## modulus
+## modulo
 
 1. do something every nth time on a very long array (10^20)
     - gradually speed up by skipping more
