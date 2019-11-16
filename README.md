@@ -20,3 +20,7 @@
 ## bitmasking and bitshifting
 
 1. implement chmod recursive on a list of files
+
+## stream manipulation
+
+1. take a stream of file permission change events from audit log and report the occurance of each type of change in percent total and percent recent
