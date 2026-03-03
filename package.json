@@ -1,7 +1,7 @@
 {
   "name": "interview-practice",
   "version": "1.0.0",
-  "description": "1. weird sorting     - take an array and sort it by alpha code     - take a square matrix and sort it in diagonal order 2. query hash     - take an array of pairs and an array of commands then perform the commands on each pair when the command matches some condition of the pair 3. measure the perimeter of the island     - take a matrix of land cells and return the number of edges 4. escape the maze     - take a matrix of maze cells and return the directions out of the maze",
+  "description": "Node.js API client boilerplate for backend pairing interview practice.",
   "homepage": "https://github.com/aaronbronow/interview-practice#readme",
   "bugs": {
     "url": "https://github.com/aaronbronow/interview-practice/issues"

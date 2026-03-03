@@ -60,12 +60,12 @@ module.exports = { fetchData };
 4. **Validation:** Ensure the JSON response is processed correctly.
 
 ## Plan
-1. create a simple .env file with version and environment="dev" properties
-1. make an Enum to store API URLs for quick access
-1. add "https://jsonplaceholder.typicode.com/comments" as a quick access URL
-1. write a jest test that takes one of the API URLs and passes it to fetchData
-1. write a jest test that calls https://httpbin.org/status/500 to validate error status
-1. write a jest test that calls https://reqbin.com with an auth header token
-1. write a driver function that uses fetchData to get comments and find the oldest, youngest, and middle comment
-1. write a driver function that uses fetchData to get comments and users, then return the most recent 5 comments per user
-1. write a jest test that calls https://reqbin.com with basic auth
+- [x] create a simple .env file with version and environment="dev" properties
+- [ ] make an Enum to store API URLs for quick access
+- [ ] add "https://jsonplaceholder.typicode.com/comments" as a quick access URL
+- [ ] write a jest test that takes one of the API URLs and passes it to fetchData
+- [ ] write a jest test that calls https://httpbin.org/status/500 to validate error status
+- [ ] write a jest test that calls https://reqbin.com with an auth header token
+- [ ] write a driver function that uses fetchData to get comments and find the oldest, youngest, and middle comment
+- [ ] write a driver function that uses fetchData to get comments and users, then return the most recent 5 comments per user
+- [ ] write a jest test that calls https://reqbin.com with basic auth

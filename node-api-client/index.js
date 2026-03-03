@@ -1,6 +1,8 @@
 const axios = require('axios');
+const VERSION = process.env.VERSION;
 
 async function fetchData(url) {
+  console.log(`Version: ${VERSION}`);
   try {
     const response = await axios.get(url);
     console.log('Status:', response.status);
