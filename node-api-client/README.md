@@ -61,8 +61,8 @@ module.exports = { fetchData };
 
 ## Plan
 - [x] create a simple .env file with version and environment="dev" properties
-- [ ] make an Enum to store API URLs for quick access
-- [ ] add "https://jsonplaceholder.typicode.com/comments" as a quick access URL
+- [x] make an Enum to store API URLs for quick access
+- [x] add "https://jsonplaceholder.typicode.com/comments" as a quick access URL
 - [ ] write a jest test that takes one of the API URLs and passes it to fetchData
 - [ ] write a jest test that calls https://httpbin.org/status/500 to validate error status
 - [ ] write a jest test that calls https://reqbin.com with an auth header token

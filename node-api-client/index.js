@@ -1,8 +1,8 @@
 const axios = require('axios');
-const VERSION = process.env.VERSION;
+const { API_URLS, APP_CONFIG } = require('./constants');
 
 async function fetchData(url) {
-  console.log(`Version: ${VERSION}`);
+  console.log(`Version: ${APP_CONFIG.VERSION}`);
   try {
     const response = await axios.get(url);
     console.log('Status:', response.status);
@@ -14,7 +14,6 @@ async function fetchData(url) {
 }
 
 // Example usage:
-// const API_URL = 'https://jsonplaceholder.typicode.com/posts/1';
-// fetchData(API_URL);
+// fetchData(API_URLS.COMMENTS);
 
 module.exports = { fetchData };
