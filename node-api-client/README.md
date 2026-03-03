@@ -64,8 +64,7 @@ module.exports = { fetchData };
 - [x] make an Enum to store API URLs for quick access
 - [x] add "https://jsonplaceholder.typicode.com/comments" as a quick access URL
 - [x] write a jest test that takes one of the API URLs and passes it to fetchData
-- [ ] write a jest test that calls https://httpbin.org/status/500 to validate error status
-- [ ] write a jest test that calls https://reqbin.com with an auth header token
+- [x] write a jest test that calls https://httpbin.org/status/500 to validate error status
+- [x] write a jest test that calls https://reqbin.com with an auth header token
 - [ ] write a driver function that uses fetchData to get comments and find the oldest, youngest, and middle comment
 - [ ] write a driver function that uses fetchData to get comments and users, then return the most recent 5 comments per user
-- [ ] write a jest test that calls https://reqbin.com with basic auth
