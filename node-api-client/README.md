@@ -66,5 +66,5 @@ module.exports = { fetchData };
 - [x] write a jest test that takes one of the API URLs and passes it to fetchData
 - [x] write a jest test that calls https://httpbin.org/status/500 to validate error status
 - [x] write a jest test that calls https://reqbin.com with an auth header token
-- [ ] write a driver function that uses fetchData to get comments and find the oldest, youngest, and middle comment
-- [ ] write a driver function that uses fetchData to get comments and users, then return the most recent 5 comments per user
+- [x] write a driver function that uses fetchData to get comments and find the oldest, youngest, and middle comment
+- [x] write a driver function that uses fetchData to get comments and users, then return the most recent 5 comments per user

@@ -1,4 +1,4 @@
-const { fetchData } = require('./index');
+const { fetchData, getCommentsAnalysis, getRecentCommentsPerUser } = require('./index');
 const { API_URLS } = require('./constants');
 
 describe('fetchData', () => {
@@ -40,5 +40,46 @@ describe('fetchData', () => {
     // we just ensure the call was made and some response was received.
     // In a real scenario, we'd check if the echo shows our header.
     expect(data).toBeDefined();
+  });
+});
+
+describe('getCommentsAnalysis', () => {
+  test('should return oldest, youngest, and middle comments', async () => {
+    const analysis = await getCommentsAnalysis();
+    
+    expect(analysis).not.toBeNull();
+    expect(analysis).toHaveProperty('oldest');
+    expect(analysis).toHaveProperty('youngest');
+    expect(analysis).toHaveProperty('middle');
+    
+    // Using id as proxy for age:
+    // oldest.id should be less than youngest.id
+    expect(analysis.oldest.id).toBeLessThan(analysis.youngest.id);
+    
+    // middle.id should be between oldest and youngest
+    expect(analysis.middle.id).toBeGreaterThanOrEqual(analysis.oldest.id);
+    expect(analysis.middle.id).toBeLessThanOrEqual(analysis.youngest.id);
+  });
+});
+
+describe('getRecentCommentsPerUser', () => {
+  test('should return 5 most recent comments per user', async () => {
+    const result = await getRecentCommentsPerUser();
+    
+    expect(result).not.toBeNull();
+    
+    // Validate results for some users (using known data from JSONPlaceholder)
+    for (const userId in result) {
+      const userComments = result[userId];
+      expect(Array.isArray(userComments)).toBe(true);
+      expect(userComments.length).toBeLessThanOrEqual(5);
+      
+      // Check if comments are sorted by id descending (most recent first)
+      if (userComments.length > 1) {
+        for (let i = 0; i < userComments.length - 1; i++) {
+          expect(userComments[i].id).toBeGreaterThan(userComments[i+1].id);
+        }
+      }
+    }
   });
 });

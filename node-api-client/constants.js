@@ -5,6 +5,7 @@
 const API_URLS = Object.freeze({
   COMMENTS: 'https://jsonplaceholder.typicode.com/comments',
   USERS: 'https://jsonplaceholder.typicode.com/users',
+  POSTS: 'https://jsonplaceholder.typicode.com/posts',
   ERROR_500: 'https://httpbin.org/status/500',
   AUTH_TEST: 'https://reqbin.com'
 });
